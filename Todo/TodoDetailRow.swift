@@ -20,8 +20,15 @@ struct TodoDetailRow: View {
             }, set: {
                 self.todo.state = $0 ? TodoEntity.State.done.rawValue : TodoEntity.State.todo.rawValue
             })) {
+                if self.todo.state == TodoEntity.State.done.rawValue {
+                    Text(self.todo.task ?? "no title")
+                    .strikethrough()
+                } else {
                 Text(self.todo.task ?? "no title")
+                }
             }
+            .foregroundColor(self.todo.state == TodoEntity.State.done.rawValue
+                ? .secondary : .primary)
         }
     }
 }
