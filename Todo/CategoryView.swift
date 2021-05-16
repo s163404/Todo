@@ -10,14 +10,21 @@ import SwiftUI
 struct CategoryView: View {
     var category: TodoEntity.Category
     @State var numberOfTasks = 0
+    @State var showList = false
+    @Environment(\.managedObjectContext) var viewContext
     var body: some View {
         VStack(alignment: .leading) {
-            VStack {
-                Image(systemName: category.image())
-                    .font(.largeTitle)
-                Text(category.toString())
-                Text("・\(numberOfTasks)タスク")
+            Image(systemName: category.image())
+                .font(.largeTitle)
+                // 指定したcontentをシート表示する
+                // isPresented trueで表示する
+                .sheet(isPresented: $showList) {
+                    TodoList(category: self.category)
+                        .environment(\.managedObjectContext, self.viewContext)
             }
+
+            Text(category.toString())
+            Text("・\(numberOfTasks)タスク")
             Button(action: {}) {
                 Image(systemName: "plus")
             }
@@ -28,10 +35,15 @@ struct CategoryView: View {
         .foregroundColor(.white)
         .background(category.color())
         .cornerRadius(20)
+        .onTapGesture {
+            self.showList = true
+        }
     }
 }
 
 struct CategoryView_Previews: PreviewProvider {
+    static let context = (UIApplication.shared.delegate as! AppDelegate)
+        .persistentContainer.viewContext
     static var previews: some View {
         VStack {
             CategoryView(category: .ImpUrg_1st, numberOfTasks: 100)
@@ -39,6 +51,7 @@ struct CategoryView_Previews: PreviewProvider {
             CategoryView(category: .NImpUrg_3rd, numberOfTasks: 0)
             CategoryView(category: .NImpNUrg_4th, numberOfTasks: 0)
         }
+        .environment(\.managedObjectContext, context)
 
     }
 }
