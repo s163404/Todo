@@ -27,7 +27,7 @@ struct TodoList: View {
                 ForEach(todoList) { todo in
                     if todo.category == self.category.rawValue {
                         // 要素: TodoEntityひとつずつ
-                        Text(todo.task ?? "notitle")
+                        TodoDetailRow(todo: todo, hideIcon: true)
                     }
                 }
             }
