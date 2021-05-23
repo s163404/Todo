@@ -13,6 +13,18 @@ struct NewTask: View {
     @State var category: Int16 = TodoEntity.Category.ImpUrg_1st.rawValue
     var categories: [TodoEntity.Category]
         = [.ImpUrg_1st, .ImpNUrg_2nd, .NImpUrg_3rd, .NImpNUrg_4th]
+    @Environment(\.managedObjectContext) var viewContext
+    
+    fileprivate func save() {
+        do {
+            try self.viewContext.save()
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+    }
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         NavigationView {
             Form {
@@ -40,7 +52,9 @@ struct NewTask: View {
                     }
                 }
                 Section(header: Text("操作")) {
-                    Button(action: {}) {
+                    Button(action: {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }) {
                         HStack(alignment: .center) {
                             Image(systemName: "minus.circle.fill")
                             Text("キャンセル")
@@ -50,12 +64,25 @@ struct NewTask: View {
                 }
             }
             .navigationBarTitle("タスクの追加")
+            .navigationBarItems(trailing: Button(action: {
+                TodoEntity.create(in: self.viewContext,
+                                  category: TodoEntity.Category(rawValue: self.category) ?? .ImpUrg_1st,
+                                  task: self.task,
+                                  time: self.time)
+                self.save()
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("保存")
+            })
         }
     }
 }
 
 struct NewTask_Previews: PreviewProvider {
+    static let context = (UIApplication.shared.delegate as! AppDelegate)
+        .persistentContainer.viewContext
     static var previews: some View {
         NewTask()
+            .environment(\.managedObjectContext, context)
     }
 }
