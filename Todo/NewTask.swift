@@ -12,7 +12,7 @@ struct NewTask: View {
     
     var body: some View {
         NavigationView {
-            Form {
+            Vstack {
                 TextField("タスクを入力", text: $task)
             }
             .navigationBarTitle("タスクの追加")
