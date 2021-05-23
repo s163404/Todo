@@ -25,7 +25,7 @@ struct CategoryView: View {
 
             Text(category.toString())
             Text("・\(numberOfTasks)タスク")
-            Button(action: {}) {
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                 Image(systemName: "plus")
             }
             Spacer()
