@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		664495EE26512FBE0051301B /* TodoDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664495ED26512FBE0051301B /* TodoDetailRow.swift */; };
 		66C8240425938CA2007DED2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8240325938CA2007DED2F /* AppDelegate.swift */; };
 		66C8240625938CA2007DED2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8240525938CA2007DED2F /* SceneDelegate.swift */; };
 		66C8240825938CA2007DED2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8240725938CA2007DED2F /* ContentView.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		664495ED26512FBE0051301B /* TodoDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailRow.swift; sourceTree = "<group>"; };
 		66C8240025938CA2007DED2F /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C8240325938CA2007DED2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66C8240525938CA2007DED2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				66C8244F2598BB66007DED2F /* UserView.swift */,
 				66ED8FCD2598C13D006DB5DB /* CategoryView.swift */,
 				66ED8FD725AAF1C7006DB5DB /* TodoList.swift */,
+				664495ED26512FBE0051301B /* TodoDetailRow.swift */,
 				66ED8FD225AAEE45006DB5DB /* QuickNewTask.swift */,
 				66C82441259393B8007DED2F /* Checkbox.swift */,
 				66C8240C25938CA3007DED2F /* Assets.xcassets */,
@@ -311,6 +314,7 @@
 				66C82442259393B8007DED2F /* Checkbox.swift in Sources */,
 				66C8240825938CA2007DED2F /* ContentView.swift in Sources */,
 				66C8243D25938E7B007DED2F /* CategoryImage.swift in Sources */,
+				664495EE26512FBE0051301B /* TodoDetailRow.swift in Sources */,
 				66ED8FC92598C0A0006DB5DB /* TodoEntity+Extension.swift in Sources */,
 				66C8240B25938CA2007DED2F /* Todo.xcdatamodeld in Sources */,
 			);
