@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		661471FE26E664E400F9A20E /* TaskToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661471FD26E664E400F9A20E /* TaskToday.swift */; };
 		6614720226E666E200F9A20E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6614720126E666E200F9A20E /* Date+Extension.swift */; };
+		6614720626EE137D00F9A20E /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6614720526EE137D00F9A20E /* RoundedCorners.swift */; };
 		664495EE26512FBE0051301B /* TodoDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664495ED26512FBE0051301B /* TodoDetailRow.swift */; };
 		664495F0265A742C0051301B /* NewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664495EF265A742C0051301B /* NewTask.swift */; };
 		66C8240425938CA2007DED2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8240325938CA2007DED2F /* AppDelegate.swift */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		661471FD26E664E400F9A20E /* TaskToday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskToday.swift; sourceTree = "<group>"; };
 		6614720126E666E200F9A20E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		6614720526EE137D00F9A20E /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		664495ED26512FBE0051301B /* TodoDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailRow.swift; sourceTree = "<group>"; };
 		664495EF265A742C0051301B /* NewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTask.swift; sourceTree = "<group>"; };
 		66C8240025938CA2007DED2F /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +146,7 @@
 				66C82441259393B8007DED2F /* Checkbox.swift */,
 				664495EF265A742C0051301B /* NewTask.swift */,
 				66C8240C25938CA3007DED2F /* Assets.xcassets */,
+				6614720526EE137D00F9A20E /* RoundedCorners.swift */,
 				66C8241125938CA3007DED2F /* LaunchScreen.storyboard */,
 				66C8241425938CA3007DED2F /* Info.plist */,
 				66C8240925938CA2007DED2F /* Todo.xcdatamodeld */,
@@ -335,6 +338,7 @@
 				66C8243D25938E7B007DED2F /* CategoryImage.swift in Sources */,
 				664495EE26512FBE0051301B /* TodoDetailRow.swift in Sources */,
 				66ED8FC92598C0A0006DB5DB /* TodoEntity+Extension.swift in Sources */,
+				6614720626EE137D00F9A20E /* RoundedCorners.swift in Sources */,
 				66C8240B25938CA2007DED2F /* Todo.xcdatamodeld in Sources */,
 				6614720226E666E200F9A20E /* Date+Extension.swift in Sources */,
 			);
