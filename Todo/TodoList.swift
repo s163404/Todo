@@ -20,19 +20,23 @@ struct TodoList: View {
     let category: TodoEntity.Category
     
     var body: some View {
-        VStack {
-            List {
-                // ForEachは構造体
-                // categoryを絞り込み
-                ForEach(todoList) { todo in
-                    if todo.category == self.category.rawValue {
-                        // 要素: TodoEntityひとつずつ
-                        TodoDetailRow(todo: todo, hideIcon: true)
+        NavigationView {
+            VStack {
+                List {
+                    // ForEachは構造体
+                    // categoryを絞り込み
+                    ForEach(todoList) { todo in
+                        if todo.category == self.category.rawValue {
+                            // 要素: TodoEntityひとつずつ
+                            NavigationLink(destination: EditTask(todo: todo)) {
+                                TodoDetailRow(todo: todo, hideIcon: true)
+                            }
+                        }
                     }
                 }
+                QuickNewTask(category: category)
+                    .padding()
             }
-            QuickNewTask(category: category)
-                .padding()
         }
     }
 }
