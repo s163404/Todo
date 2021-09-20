@@ -45,6 +45,9 @@ struct CategoryView: View {
         .onTapGesture {
             self.showList = true
         }
+        .onAppear {
+            self.numberOfTasks = TodoEntity.count(in: self.viewContext, category: self.category)
+        }
     }
 }
 
