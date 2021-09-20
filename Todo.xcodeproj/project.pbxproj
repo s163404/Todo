@@ -10,6 +10,8 @@
 		661471FE26E664E400F9A20E /* TaskToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661471FD26E664E400F9A20E /* TaskToday.swift */; };
 		6614720226E666E200F9A20E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6614720126E666E200F9A20E /* Date+Extension.swift */; };
 		6614720626EE137D00F9A20E /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6614720526EE137D00F9A20E /* RoundedCorners.swift */; };
+		6614720826F8D30600F9A20E /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6614720726F8D30600F9A20E /* KeyboardObserver.swift */; };
+		6614720A26F8D60C00F9A20E /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6614720926F8D60C00F9A20E /* UIApplication+Extension.swift */; };
 		664495EE26512FBE0051301B /* TodoDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664495ED26512FBE0051301B /* TodoDetailRow.swift */; };
 		664495F0265A742C0051301B /* NewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664495EF265A742C0051301B /* NewTask.swift */; };
 		66C8240425938CA2007DED2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8240325938CA2007DED2F /* AppDelegate.swift */; };
@@ -54,6 +56,8 @@
 		661471FD26E664E400F9A20E /* TaskToday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskToday.swift; sourceTree = "<group>"; };
 		6614720126E666E200F9A20E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		6614720526EE137D00F9A20E /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		6614720726F8D30600F9A20E /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
+		6614720926F8D60C00F9A20E /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		664495ED26512FBE0051301B /* TodoDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailRow.swift; sourceTree = "<group>"; };
 		664495EF265A742C0051301B /* NewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTask.swift; sourceTree = "<group>"; };
 		66C8240025938CA2007DED2F /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +148,7 @@
 				664495ED26512FBE0051301B /* TodoDetailRow.swift */,
 				66ED8FD225AAEE45006DB5DB /* QuickNewTask.swift */,
 				66C82441259393B8007DED2F /* Checkbox.swift */,
+				6614720726F8D30600F9A20E /* KeyboardObserver.swift */,
 				664495EF265A742C0051301B /* NewTask.swift */,
 				66C8240C25938CA3007DED2F /* Assets.xcassets */,
 				6614720526EE137D00F9A20E /* RoundedCorners.swift */,
@@ -188,6 +193,7 @@
 				66ED8FC82598C0A0006DB5DB /* TodoEntity+Extension.swift */,
 				66FC24D3265A7E1800261784 /* Binding+Extension.swift */,
 				6614720126E666E200F9A20E /* Date+Extension.swift */,
+				6614720926F8D60C00F9A20E /* UIApplication+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -332,8 +338,10 @@
 				661471FE26E664E400F9A20E /* TaskToday.swift in Sources */,
 				66C824502598BB66007DED2F /* UserView.swift in Sources */,
 				66ED8FCE2598C13D006DB5DB /* CategoryView.swift in Sources */,
+				6614720826F8D30600F9A20E /* KeyboardObserver.swift in Sources */,
 				66C82442259393B8007DED2F /* Checkbox.swift in Sources */,
 				66C8240825938CA2007DED2F /* ContentView.swift in Sources */,
+				6614720A26F8D60C00F9A20E /* UIApplication+Extension.swift in Sources */,
 				664495F0265A742C0051301B /* NewTask.swift in Sources */,
 				66C8243D25938E7B007DED2F /* CategoryImage.swift in Sources */,
 				664495EE26512FBE0051301B /* TodoDetailRow.swift in Sources */,
