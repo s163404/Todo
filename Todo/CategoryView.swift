@@ -13,16 +13,25 @@ struct CategoryView: View {
     @State var showList = false
     @Environment(\.managedObjectContext) var viewContext
     @State var addNewTask = false
+    fileprivate func update() {
+        self.numberOfTasks = TodoEntity.count(in: self.viewContext, category: self.category)
+    }
+    
     var body: some View {
-        VStack(alignment: .leading) {
+        
+        let gradient = Gradient(colors: [category.color(), category.color().opacity(0.8)])
+        let linearGradationColor = LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom)
+        
+        // memo: 定数があるため、returnを明示的につける必要がある
+        return VStack(alignment: .leading) {
             Image(systemName: category.image())
                 .font(.largeTitle)
                 // 指定したcontentをシート表示する
                 // isPresented trueで表示する
-                .sheet(isPresented: $showList) {
+                .sheet(isPresented: $showList, onDismiss: { self.update() }) {
                     TodoList(category: self.category)
                         .environment(\.managedObjectContext, self.viewContext)
-            }
+                }
 
             Text(category.toString())
             Text("・\(numberOfTasks)タスク")
@@ -31,7 +40,7 @@ struct CategoryView: View {
             }) {
                 Image(systemName: "plus")
             }
-            .sheet(isPresented: $addNewTask) {
+            .sheet(isPresented: $addNewTask, onDismiss: { self.update() }) {
                 NewTask(category: self.category.rawValue)
                     .environment(\.managedObjectContext, self.viewContext)
             }
@@ -40,10 +49,13 @@ struct CategoryView: View {
         .padding()
         .frame(maxWidth: .infinity, minHeight:  150)
         .foregroundColor(.white)
-        .background(category.color())
+        .background(linearGradationColor)
         .cornerRadius(20)
         .onTapGesture {
             self.showList = true
+        }
+        .onAppear {
+            self.update()
         }
     }
 }
